@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday Pihu! 🎉💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #ffdef8, #ffd6e8);
+      font-family: 'Dancing Script', cursive;
+      color: #d1006c;
+      text-align: center;
+      padding: 2rem 1rem;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin: 0.5rem 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 0.5rem 0 1rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin: 0.5rem 0;
+    }
+
+    .emoji {
+      font-size: 2rem;
+      margin: 0 0.2rem;
+    }
+
+    .kisses-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem auto;
+      max-width: 400px;
+    }
+
+    .kiss {
+      width: 80px;
+      height: 80px;
+      background-image: url('https://em-content.zobj.net/thumbs/240/apple/354/kiss-mark_1f48b.png');
+      background-size: cover;
+      animation: floatKiss 4s infinite ease-in-out, pulse 2s infinite;
+    }
+
+    @keyframes floatKiss {
+      0%   { transform: translateY(0) rotate(0deg); }
+      50%  { transform: translateY(-20px) rotate(10deg); }
+      100% { transform: translateY(0) rotate(-10deg); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.2); }
+    }
+
+    button {
+      background-color: #d1006c;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 2rem;
+      box-shadow: 0 5px 15px rgba(209, 0, 108, 0.5);
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #a70054;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+    }
+
+    .heart {
+      position: absolute;
+      width: 150px;
+      height: 130px;
+      background: #d1006c;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      font-family: 'Dancing Script', cursive;
+      text-align: center;
+      padding: 10px 8px;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      animation: floatUp linear infinite;
+      white-space: pre;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      border: 3px solid white;
+      box-shadow:
+        inset 0 0 10px #ff8dc4,
+        0 4px 12px rgba(209, 0, 108, 0.5);
+      pointer-events: auto;
+      cursor: pointer;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .emoji {
+        font-size: 1.6rem;
+      }
+
+      .kiss {
+        width: 60px;
+        height: 60px;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pihu 🎉💖🎂</h1>
+  <h2>Happy Birthday! 🎈🎊💕</h2>
+
+  <p>Love you soooo much! <span class="emoji">😍😘💞</span></p>
+  <p>You’re my ❤️, my 🌟, my everything! <span class="emoji">💖💫💓</span></p>
+  <p>Today is all about YOU! <span class="emoji">🎁🎉🎈</span></p>
+
+  <!-- Kisses animation -->
+  <div class="kisses-container">
+    <div class="kiss"></div>
+    <div class="kiss"></div>
+    <div class="kiss"></div>
+    <div class="kiss"></div>
+    <div class="kiss"></div>
+    <div class="kiss"></div>
+  </div>
+
+  <button onclick="alert('Sending you all my love and kisses, Pihu! 💖😘💋')">💌 Kisses for You 💌</button>
+
+  <div class="hearts" id="hearts-container"></div>
+
+  <script>
+    const heartsContainer = document.getElementById('hearts-container');
+
+    const messages = [
+`  Love you  
+  my world  
+ ❤️    ❤️  
+💕      💕  
+  💓  💓`,
+
+`Love you  
+ darling  
+💕     💕  
+ 💖   💖  
+  💗 💗`,
+
+`Love you  
+my future  
+  wife 💍  
+ 💖   💖  
+  💓  💓`,
+
+` You’re  
+  my  
+everything  
+❤️    ❤️  
+ 💕   💕`,
+
+`Forever  
+and always  
+ 💫   💫  
+💖     💖  
+ 💓   💓`,
+
+`My heart  
+   is  
+  yours  
+💓    💓  
+ 💕   💕`
+    ];
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+
+      const msg = messages[Math.floor(Math.random() * messages.length)];
+      heart.textContent = msg;
+
+      heart.addEventListener('click', () => heart.remove());
+      heart.addEventListener('touchstart', () => heart.remove());
+
+      heart.style.left = Math.random() * 80 + 'vw';
+      heart.style.animationDuration = (Math.random() * 4 + 6) + 's';
+
+      heartsContainer.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 11000);
+    }
+
+    setInterval(createHeart, 1000);
+  </script>
+
+</body>
+</html>
